@@ -32,7 +32,6 @@
 
 1. [Introducción](#introduccion)
 3. [Construido con](#consturido)
-4. [Pre-requisitos](#prerequisitos)
 7. [Contribuyendo](#contribuyendo)
 8. [Licencia](#licencia)
 9. [Contacto](#contacto)
