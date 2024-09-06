@@ -14,7 +14,7 @@
   <p align="center">
     Joyería online
     <br />
-    <a href="https://github.com/hmfarias/NotreDameJoyas"><strong>Explora los documentos »</strong></a>
+    <a href="https://github.com/hmfarias/NotreDameJoyas"><strong>Explora el sitio en Git Pages»</strong></a>
     <br />
     <br />
     <a href="https://github.com/hmfarias/NotreDameJoyas">Ver repositorio</a>
