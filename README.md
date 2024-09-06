@@ -31,7 +31,6 @@
 ### Tabla de contenidos
 
 1. [Introducción](#introduccion)
-2. [Archivos importantes de este repositorio](#archivos)
 3. [Construido con](#consturido)
 4. [Pre-requisitos](#prerequisitos)
 5. [Ejecución del Archivo Jupyter Notebook](#ejecucion)
@@ -47,36 +46,10 @@
 <a name="introduccion"></a>
 ## INTRODUCCION
 
-NotreDameJoyas, es un sistema de inteligencia artificial innovador que permite crear recetas de cocina personalizadas a partir de una lista de ingredientes. Solo necesitas ingresar los ingredientes disponibles, y la IA se encargará de sugerir platos creativos que puedes preparar. Además, genera una imagen del plato final, brindándote una visualización clara de lo que puedes esperar al seguir la receta. Ideal para quienes buscan inspiración en la cocina o quieren aprovechar al máximo los ingredientes que tienen a mano. 
+Bienvenidos a **Notre Dame Joyas**, tu tienda online de joyería exclusiva. Aquí encontrarás una exquisita selección de piezas únicas y elegantes, diseñadas para destacar en cualquier ocasión. Nuestro compromiso es ofrecer joyas de alta calidad, elaboradas con los mejores materiales y un enfoque en la atención al detalle.
 
-(Mayores detalles se brindan en los archivos incluídos en el repositorio ([Ver siguiente punto](#archivos))
+Este repositorio contiene el código fuente de nuestra plataforma, desarrollada para brindar una experiencia de compra fluida y segura, asegurando que nuestros clientes puedan explorar y adquirir sus joyas favoritas de manera sencilla y rápida. ¡Gracias por visitarnos! 
 
-[Volver al menú](#top)
-<hr>
-
-<a name="archivos"></a>
-## ARCHIVOS IMPORTANTES
-
-Entre los archivos de este repositorio, usted podrá encontrar dos que son los mas importantes:
-
-1. **Archivo Jupyter Notebook** con el nombre **"Trabajo-Final-NotreDameJoyas-IA.ipynb"**, el cual corresponde al proyecto final presentado.
-(https://github.com/hmfarias/NotreDameJoyas/blob/main/Trabajo-Final-NotreDameJoyas-IA.ipynb)
-
-Para poder visualizar correctamente el archivo jupyter notebook con el trabajo final, es neceario clonar el presente repositorio y ejecutarlo desde jupyter notebook de manera local.
-
-2. **Archivo PDF** con el Trabajo Final que respalda al archivo anterior, con el nombre **"Trabajo final - Smart Cheff IA - Marcelo Farias.pdf"**
-(https://github.com/hmfarias/NotreDameJoyas/blob/main/Trabajo%20final%20-%20Smart%20Cheff%20IA%20-%20Marcelo%20Farias.pdf)
-
-Ambos archivos presentan el mismo contenido con una explicación pormenorizada sobre el proyecto **Smart Cheff IA**, aunque el archivo Jupyter presenta el potencial de poder ejecutar la aplicación y observar el resultado.
-Para poder hacerlo, resulta necesario que usted tenga a mano su API Key de OpenAI válida, la cual le será solicitada por **prompt cifrado** en el punto titulado **7-IMPLEMENTACIÓN - Paso 3 - Definición de API Key** del archivo Jupyter mencionado.
-
-La siguiente imágen muestra un modelo de receta generado en el la ejecución del archivo Jupyter Notebook incluído en este repositorio.
-
-<div align="center">
-        <img src="img1.png" alt="Imagen receta 1" width="270" height="270">
-        <img src="img2.png" alt="Imagen receta 2" width="270" height="270">
-        <img src="img3.png" alt="Imagen receta 3" width="270" height="270">
-</div>
 
 [Volver al menú](#top)
 <hr>
@@ -84,11 +57,15 @@ La siguiente imágen muestra un modelo de receta generado en el la ejecución de
 <a name="consturido"></a>
 ### CONSTRUIDO CON
 
-![Static Badge](https://img.shields.io/badge/Python-green?style=for-the-badge) como lenguaje de programación que cuenta con una amplia gama de librerías y frameworks que facilitan la interacción con APIs y el procesamiento de datos. Librerías como openai están bien documentadas y simplifican enormemente la implementación de solicitudes API.
+<img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/> (HyperText Markup Language) como lenguaje de marcación de hipertéxto estándar utilizado para crear y diseñar páginas web.
 
-![Static Badge](https://img.shields.io/badge/Jupyter_Notebook-orange?style=for-the-badge) como entorno de desarrollo interactivo basado en la web que permite crear y compartir documentos que contienen código en vivo, visualizaciones y texto explicativo.
+<img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/> (Cascading Style Sheets, Level 3) como lenguaje de diseño gráfico utilizado para controlar el aspecto visual de las páginas web, separando el contenido (HTML) de la presentación visual (CSS).
 
-![Static Badge](https://img.shields.io/badge/APIOpenAI-blue?style=for-the-badge) como API proveedora de modelos de inteligencia artificial desarrollado por OpenAI. Cada modelo de OpenAI, puede considerarse como una funcionalidad o capacidad específica. Estos modelos son entrenados para realizar diversas tareas relacionadas con el procesamiento del lenguaje natural. Pueden llevar a cabo funciones como generación de texto, imágenes, traducción de idiomas, respuestas a preguntas, redacción de contenido, etc., todo basado en el contexto proporcionado durante su entrenamiento.
+<img alt="JavaScript" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/> como lenguaje de programación interpretado, de alto nivel y dinámico. Se ejecuta en el navegador del cliente, lo que permite la creación de páginas web interactivas y dinámicas. 
+
+![Static Badge](https://img.shields.io/badge/React-green?style=for-the-badge) como una de las librerías más populares de JavaScript para el desarrollo de aplicaciones móviles y web. Creada por Facebook, React contiene una colección de fragmentos de código JavaScript reutilizables utilizados para crear interfaces de usuario (UI) llamadas componentes.
+
+![Static Badge](https://img.shields.io/badge/CHAKRA-orange?style=for-the-badge) como una librería de componentes de interfaz de usuario para React que permite construir aplicaciones web modernas y accesibles de manera rápida, ofreciendo componentes personalizables y listos para usar, con un enfoque en simplicidad y diseño responsivo.
 
 [Volver al menú](#top)
 <hr>
