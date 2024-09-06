@@ -33,8 +33,6 @@
 1. [Introducción](#introduccion)
 3. [Construido con](#consturido)
 4. [Pre-requisitos](#prerequisitos)
-5. [Ejecución del Archivo Jupyter Notebook](#ejecucion)
-6. [APLICACIÓN CON FRONT END](#otroRepositorio)
 7. [Contribuyendo](#contribuyendo)
 8. [Licencia](#licencia)
 9. [Contacto](#contacto)
@@ -70,74 +68,6 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 [Volver al menú](#top)
 <hr>
 
-
-
-<a name="prerequisitos"></a>
-### PRE- REQUISITOS
-
-Antes de comenzar deberá contar con:
-
-- Instalacion funcional de Jupyter Notebook
-- Python 3 o superior
-- Pip (gestor de paquetes de Python)
-- API Key de API openAI
-
-  
-[Volver al menú](#top)
-<hr>
-
-
-<a name="ejecucion"></a>
-### EJECUCION DEL ARCHIVO JUPYTER NOTEBOOK
-Para poder ejecutar el archivo Jupyter, usted deberá seguir los siguientes pasos:
-
-1. ##### Clonar el proyecto del repositorio
-
-- Cree una carpeta en un directorio local y desde la `terminal` dentro de la carpeta creada, inicialice git:
-
-```
-git init
-```
-
-- Clonar el repositorio
-
-```
-git clone https://github.com/hmfarias/NotreDameJoyas.git
-```
-2. ##### Ejecutar Jupyter Notebook
-```
-jupyter notebook
-```
-- Dentro de Jupyter, navegar hasta el archivo **Trabajo-Final-NotreDameJoyas-IA.ipynb** y ejecutarlo 
-
-3. ##### Seguir el contenido del archivo
-
-
-[Volver al menú](#top)
-<hr>
-
-
-<a name="otroRepositorio"></a>
-### APLICACIÓN CON FRONT-END STREAMLIT 
-
-Como complemento, se ha creado una aplicación que implementa lo visto en el archivo jupyter, e **incorpora la utilización del modelo OpenAI TTS-1 (Texto a Audio)**, asi como el uso de un front-end básico, generado mediante la libreria Streamlit.
-
-Para descargar y utilizar esta aplicación, puede acceder a su repositorio en el siguiente link:
-(https://github.com/hmfarias/NotreDameJoyas-IA.git)
-
-Las siguientes imágens muestran la pantalla front-end correspondiente a la aplicación que se puede encontrar en el repositorio mencionado.
-
-<div align="center">
-  <img src="imageWeb1.png" alt="Imagen receta 1" width="300" height="400">
-  <img src="imageWeb2.png" alt="Imagen receta 1" width="300" height="400">
-  <img src="imageWeb3.png" alt="Imagen receta 1" width="300" height="400">
-  <img src="imageWeb4.png" alt="Imagen receta 1" width="300" height="400">
-</div>
-
-[Volver al menú](#top)
-<hr>
-    
-<!-- CONTRIBUTING -->
 
 <a name="contribuyendo"></a>
 ## CONTRIBUYENDO
