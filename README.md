@@ -7,12 +7,12 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/hmfarias/NotreDameJoyas">
-    <img src="https://github.com/hmfarias/NotreDameJoyas/blob/main/LOGO.png" alt="Logo" width="270" height="270">
+    <img src="https://github.com/hmfarias/NotreDameJoyas/blob/main/src/assets/logo.png" alt="Logo" width="350" height="270">
   </a>
-  <h2 align="center">Smart Cheff IA</h2>
+  <h2 align="center">Brilla con estilo, descubre la joya perfecta en cada click</h2>
 
   <p align="center">
-    Generador de Recetas de Cocina Potenciado por IA
+    Joyería online
     <br />
     <a href="https://github.com/hmfarias/NotreDameJoyas"><strong>Explora los documentos »</strong></a>
     <br />
