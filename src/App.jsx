@@ -1,13 +1,14 @@
 // 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react';
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import { MainLayout } from './layouts';
+import { Home } from './pages';
 
 const App = () => {
 	return (
 		<ChakraProvider>
-			<NavBar />
-			<ItemListContainer greetings="Bienvenidos a Notre Dame Joyas" />
+			<MainLayout>
+				<Home />
+			</MainLayout>
 		</ChakraProvider>
 	);
 };

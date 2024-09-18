@@ -1,6 +1,6 @@
 import { FaShoppingCart } from 'react-icons/fa';
 
-const CarWidget = () => {
+export const CartWidget = () => {
 	return (
 		<div
 			style={{
@@ -16,5 +16,3 @@ const CarWidget = () => {
 		</div>
 	);
 };
-
-export default CarWidget;

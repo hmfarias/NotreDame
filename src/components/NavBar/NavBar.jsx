@@ -18,9 +18,9 @@ import {
 	Link,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import CarWidget from '../CarWidget/Carwidget';
+import { CartWidget } from '../CartWidget';
 
-const NavBar = () => {
+export const NavBar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
@@ -30,7 +30,7 @@ const NavBar = () => {
 					<Box>Logo</Box>
 
 					<Flex alignItems={'center'}>
-						<CarWidget />
+						<CartWidget />
 						<Stack direction={'row'} spacing={7}>
 							<Button onClick={toggleColorMode}>
 								{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
@@ -75,5 +75,3 @@ const NavBar = () => {
 		</>
 	);
 };
-
-export default NavBar;
