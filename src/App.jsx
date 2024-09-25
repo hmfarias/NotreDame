@@ -1,13 +1,13 @@
-// 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react';
 import { MainLayout } from './layouts';
 import { Home } from './pages';
+import { MainRouter } from './router';
 
 const App = () => {
 	return (
 		<ChakraProvider>
 			<MainLayout>
-				<Home />
+				<MainRouter />
 			</MainLayout>
 		</ChakraProvider>
 	);

@@ -87,7 +87,7 @@ const Item = ({ item }) => {
 								fontWeight="semibold"
 								as="h4"
 								lineHeight="tight"
-								// isTruncated
+								isTruncated
 							>
 								{item.title}
 							</Box>
