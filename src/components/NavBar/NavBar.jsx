@@ -3,6 +3,7 @@ import {
 	Flex,
 	Avatar,
 	Button,
+	Image,
 	Menu,
 	MenuButton,
 	MenuList,
@@ -18,6 +19,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { CartWidget } from '../CartWidget';
 import { useCategory } from '../../hooks';
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo2.png';
 
 export const NavBar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -29,7 +31,9 @@ export const NavBar = () => {
 		<>
 			<Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-					<Link to={`/NotreDameJoyas/`}>Logo</Link>
+					<Link to={`/NotreDameJoyas/`}>
+						<Image src={logo} objectFit="cover" h="70px" w="auto" alt={'Logo Image'} />
+					</Link>
 					<Menu>
 						<MenuButton as={Button} cursor="pointer" style={{ marginLeft: 30 }}>
 							Categorias
