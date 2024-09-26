@@ -7,12 +7,12 @@
 <!-- PROJECT LOGO -->
 <div align="center">
   <a href="https://github.com/hmfarias/NotreDameJoyas">
-    <img src="https://github.com/hmfarias/NotreDameJoyas/blob/main/src/assets/logo.png" alt="Logo" width="350" height="270">
+    <img src="https://github.com/hmfarias/NotreDameJoyas/blob/main/src/assets/logo2.png" alt="Logo" width="350" height="auto">
   </a>
-  <h2 align="center">Brilla con estilo, descubre la joya perfecta en cada click</h2>
+  <h2 align="center">Descubre lo que necesites en cada click</h2>
 
   <p align="center">
-    Joyería online
+    Polirubro online
     <br />
     <a href="https://hmfarias.github.io/NotreDameJoyas/" target="_blank" ><strong>Explora el sitio en Git Pages»</strong></a>
     <br />
@@ -43,9 +43,9 @@
 <a name="introduccion"></a>
 ## INTRODUCCION
 
-Bienvenidos a **Notre Dame Joyas**, tu tienda online de joyería exclusiva. Aquí encontrarás una exquisita selección de piezas únicas y elegantes, diseñadas para destacar en cualquier ocasión. Nuestro compromiso es ofrecer joyas de alta calidad, elaboradas con los mejores materiales y un enfoque en la atención al detalle.
+Bienvenidos a **Notre Dame**, tu tienda polirubro online exclusiva. Aquí encontrarás una selección variada de artículos de gran calidad. Nuestro compromiso es ofrecer elementos de alta calidad, elaborados con los mejores materiales y un enfoque en la atención al detalle.
 
-Este repositorio contiene el código fuente de nuestra plataforma, desarrollada para brindar una experiencia de compra fluida y segura, asegurando que nuestros clientes puedan explorar y adquirir sus joyas favoritas de manera sencilla y rápida. ¡Gracias por visitarnos! 
+Este repositorio contiene el código fuente de nuestra plataforma, desarrollada para brindar una experiencia de compra fluida y segura, asegurando que nuestros clientes puedan explorar y adquirir sus artículos favoritas de manera sencilla y rápida. ¡Gracias por visitarnos! 
 
 
 [Volver al menú](#top)
