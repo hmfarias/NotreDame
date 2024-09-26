@@ -15,7 +15,7 @@ export async function getAllCategories() {
 	return await axios.get('https://dummyjson.com/products/categories');
 }
 
-// Bring category by ID from API
+// Bring products by category ID from API
 export async function getProductsByCategory(categoryId) {
 	return await axios.get(`https://dummyjson.com/products/category/${categoryId}`);
 }
