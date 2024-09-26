@@ -10,7 +10,7 @@ export const MainRouter = () => {
 	//
 	//		2- qué componente se va a renderizar en ese destino "element"
 
-	// Agrego "NotreDameJoyas" al path, para compatibilidad con GitHub Pages (al igual que en vite.config.js)
+	// Se instaaló gh-pages para poder hacer el deploy en Git Pages. Entonces Agrego "NotreDameJoyas" a todos los paths, para compatibilidad con la configuración de GitHub Pages (al igual que en vite.config.js)
 	return (
 		<Router>
 			<NavBar />
