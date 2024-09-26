@@ -39,6 +39,11 @@ export const NavBar = () => {
 							Categorias
 						</MenuButton>
 						<MenuList height={'300px'} overflowY={'scroll'}>
+							{/* add the home option in the menu */}
+							<MenuItem key={'home'}>
+								<Link to={`/NotreDameJoyas/`}>{'HOME'}</Link>
+							</MenuItem>
+							{/* add the rest of categories */}
 							{categories.map((category) => (
 								<MenuItem key={category.slug}>
 									<Link to={`/NotreDameJoyas/category/${category.slug}`}>

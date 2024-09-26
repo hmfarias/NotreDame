@@ -80,7 +80,7 @@ export const ItemListContainer = ({ products }) => {
 		<Flex
 			wrap="wrap" // To allow the elements to wrap in several rows
 			justifyContent="center" // Centers horizontally the elements
-			alignItems="space" // Focuses vertically the elements
+			alignItems="flex-start" //Align the elements from the top
 			minHeight="100vh" // Ensures that the container occupies at least 100% of the screen height
 		>
 			{products.map((item) => {
