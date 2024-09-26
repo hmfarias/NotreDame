@@ -32,6 +32,7 @@
 
 1. [Introducción](#introduccion)
 3. [Construido con](#consturido)
+4. [Consideraciones sobre el Router](#router)
 7. [Contribuyendo](#contribuyendo)
 8. [Licencia](#licencia)
 9. [Contacto](#contacto)
@@ -66,6 +67,17 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 
 [Volver al menú](#top)
 <hr>
+
+
+<a name="router"></a>
+## CONSIDERACIONES SOBRE EL ROUTER
+
+Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en todos los paths "/NotreDameJoyas".
+
+
+[Volver al menú](#top)
+<hr>
+
 
 
 <a name="contribuyendo"></a>
