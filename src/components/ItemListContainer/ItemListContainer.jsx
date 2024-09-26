@@ -77,7 +77,12 @@ const Item = ({ item }) => {
 
 export const ItemListContainer = ({ products }) => {
 	return (
-		<Flex wrap={'wrap'}>
+		<Flex
+			wrap="wrap" // To allow the elements to wrap in several rows
+			justifyContent="center" // Centers horizontally the elements
+			alignItems="space" // Focuses vertically the elements
+			minHeight="100vh" // Ensures that the container occupies at least 100% of the screen height
+		>
 			{products.map((item) => {
 				return <Item key={item.id} item={item} />;
 			})}
