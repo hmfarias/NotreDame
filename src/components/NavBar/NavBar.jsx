@@ -29,7 +29,7 @@ export const NavBar = () => {
 
 	return (
 		<>
-			<Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+			<Box bg={useColorModeValue('gray.500', 'gray.700')} px={4}>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
 					<Link to={`/NotreDameJoyas/`}>
 						<Image src={logo} objectFit="cover" h="70px" w="auto" alt={'Logo Image'} />
