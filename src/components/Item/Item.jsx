@@ -1,3 +1,10 @@
+/** Product Item
+ * * Item.jsx
+ * Implements and returns a card corresponding to a specific product
+ * Params:
+ * 	item: It's a only element of the "products" object which contains the necessary data for the card of that product
+ */
+
 import {
 	Box,
 	Heading,
@@ -23,13 +30,13 @@ export const Item = ({ item }) => {
 				bg="white"
 				border={'1px'}
 				borderColor="black"
-				boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}
+				boxShadow={useColorModeValue('7px 7px 0 grey', '7px 7px 0 #887F76')}
 			>
 				<Box h={'200px'} borderBottom={'1px'} borderColor="black">
 					<Img
 						src={item.thumbnail}
 						roundedTop={'sm'}
-						objectFit="cover"
+						objectFit="scale-down"
 						h="full"
 						w="full"
 						alt={'Blog Image'}
@@ -42,7 +49,7 @@ export const Item = ({ item }) => {
 					<Text color={'gray.500'} noOfLines={2}>
 						{item.description}
 					</Text>
-					<Box bg="gold" display={'inline-block'} px={2} py={1} color="white" mb={2}>
+					<Box bg="gold" display={'inline-block'} px={2} py={1} color="grey" mb={2}>
 						<Text fontSize={'xs'} fontWeight="medium">
 							★ {item.rating}
 						</Text>

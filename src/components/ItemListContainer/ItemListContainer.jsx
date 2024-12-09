@@ -1,3 +1,10 @@
+/**
+ * * ItemListContainer.jsx()
+ * Implements and returns all items corresponding to the products
+ * Params:
+ * 	products: it's an object that contains all the products brought from the API
+ */
+
 import { Flex } from '@chakra-ui/react';
 import { Item } from '../Item';
 

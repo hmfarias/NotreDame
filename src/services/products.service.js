@@ -1,21 +1,32 @@
+/** PRODUCTS SERVICE
+ * *products.service.js
+ * Implement and return all calls, related to products:
+ * * All products
+ * * A product by ID
+ * * All product categories
+ * * All products in a category
+ */
+
 import axios from 'axios';
 
+const endpoint = 'https://dummyjson.com/products';
+
 // Bring all products from API
-export async function getAllProducts() {
-	return await axios.get('https://dummyjson.com/products');
-}
+export const getAllProducts = async () => {
+	return await axios.get(`${endpoint}`);
+};
 
 // Bring products by ID from API
-export async function getProductById(id) {
-	return await axios.get(`https://dummyjson.com/products/${id}`);
-}
+export const getProductById = async (id) => {
+	return await axios.get(`${endpoint}/${id}`);
+};
 
 // Bring all categories from API
-export async function getAllCategories() {
-	return await axios.get('https://dummyjson.com/products/categories');
-}
+export const getAllCategories = async () => {
+	return await axios.get(`${endpoint}/categories`);
+};
 
 // Bring products by category ID from API
-export async function getProductsByCategory(categoryId) {
-	return await axios.get(`https://dummyjson.com/products/category/${categoryId}`);
-}
+export const getProductsByCategory = async (categoryId) => {
+	return await axios.get(`${endpoint}/category/${categoryId}`);
+};

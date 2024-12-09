@@ -1,3 +1,8 @@
+/**
+ * * Loader.jsx
+ * Impletements and return a spinner shown on the screen while a process is being carried out such as the product load
+ */
+
 import { Flex, Spinner } from '@chakra-ui/react';
 
 export const Loader = () => {

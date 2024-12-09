@@ -1,3 +1,10 @@
+/**
+ * * ItemDetailContainer.jsx
+ * returns a container with the complete data of the selected product
+ * Params:
+ * 	- item: It is the object that contains the data of the selected product
+ */
+
 import {
 	Box,
 	chakra,

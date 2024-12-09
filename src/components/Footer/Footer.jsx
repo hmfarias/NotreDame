@@ -1,3 +1,8 @@
+/**
+ * * Footer.jsx
+ * Returns the footer for the page
+ */
+
 import {
 	Box,
 	chakra,

@@ -13,13 +13,14 @@ export const useItems = () => {
 
 	// useEffect() -> Hook that serves to execute actions ensuring that the component is already rendering
 	// Then avoid that if for some reason the API takes too long to respond, an error occurs.
+	// useEffect() without denendencies implies that whatever within the useEffect() will be executed the first time the component is mount
 	useEffect(() => {
 		getAllProducts()
 			.then((res) => {
 				setProductsData(res.data.products);
 			})
 			.catch((error) => {
-				console.log(error);
+				console.error(error);
 			})
 			.finally(() => setLoading(false));
 	}, []);

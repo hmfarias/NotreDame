@@ -1,3 +1,8 @@
+/**
+ * * Navbar.jsx
+ * Impletements and return the navbar for the page
+ */
+
 import {
 	Box,
 	Flex,
@@ -36,12 +41,12 @@ export const NavBar = () => {
 					</Link>
 					<Menu>
 						<MenuButton as={Button} cursor="pointer" style={{ marginLeft: 30 }}>
-							Categorias
+							Categories
 						</MenuButton>
 						<MenuList height={'300px'} overflowY={'scroll'}>
 							{/* add the home option in the menu */}
 							<MenuItem key={'home'}>
-								<Link to={`/NotreDameJoyas/`}>{'HOME'}</Link>
+								<Link to={`/NotreDameJoyas/`}>{'All products'}</Link>
 							</MenuItem>
 							{/* add the rest of categories */}
 							{categories.map((category) => (

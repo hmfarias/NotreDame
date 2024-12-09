@@ -1,5 +1,10 @@
+/** Product Item
+ * * ItemCount.jsx
+ * Implements a counter
+ */
+
 import { useEffect, useState } from 'react';
-import { Flex, Button, Text, Box } from '@chakra-ui/react';
+import { Button, Text, Box } from '@chakra-ui/react';
 
 export const ItemCount = () => {
 	const [count, SetCount] = useState(0);
@@ -30,7 +35,7 @@ export const ItemCount = () => {
 	return (
 		<Box>
 			<Button onClick={handleAdd}> + </Button>
-			{count}
+			<Text>{count}</Text>
 			<Button onClick={handleRemove}> - </Button>
 		</Box>
 	);
