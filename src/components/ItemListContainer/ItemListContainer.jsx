@@ -7,6 +7,7 @@
 
 import { Flex } from '@chakra-ui/react';
 import { Item } from '../Item';
+import { PropTypes } from 'prop-types';
 
 export const ItemListContainer = ({ products }) => {
 	return (
@@ -21,4 +22,8 @@ export const ItemListContainer = ({ products }) => {
 			})}
 		</Flex>
 	);
+};
+
+ItemListContainer.propTypes = {
+	products: PropTypes.array.isRequired,
 };

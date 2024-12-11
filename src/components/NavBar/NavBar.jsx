@@ -1,5 +1,5 @@
 /**
- * * Navbar.jsx
+ * Navbar.jsx
  * Impletements and return the navbar for the page
  */
 
@@ -14,7 +14,6 @@ import {
 	MenuList,
 	MenuItem,
 	MenuDivider,
-	useDisclosure,
 	useColorModeValue,
 	Stack,
 	useColorMode,
@@ -28,7 +27,6 @@ import logo from '../../assets/logo2.png';
 
 export const NavBar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const { isOpen, onOpen, onClose } = useDisclosure();
 
 	const { categories } = useCategory();
 

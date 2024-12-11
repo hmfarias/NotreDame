@@ -17,6 +17,7 @@ import {
 } from '@chakra-ui/react';
 import { BsArrowUpRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 
 export const Item = ({ item }) => {
 	return (
@@ -80,4 +81,8 @@ export const Item = ({ item }) => {
 			</Box>
 		</Center>
 	);
+};
+
+Item.propTypes = {
+	item: PropTypes.object.isRequired,
 };

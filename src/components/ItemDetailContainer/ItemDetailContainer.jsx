@@ -24,6 +24,7 @@ import {
 	ListItem,
 } from '@chakra-ui/react';
 import { MdLocalShipping } from 'react-icons/md';
+import { PropTypes } from 'prop-types';
 
 export const ItemDetailContainer = ({ item }) => {
 	return (
@@ -156,4 +157,8 @@ export const ItemDetailContainer = ({ item }) => {
 			</SimpleGrid>
 		</Container>
 	);
+};
+
+ItemDetailContainer.propTypes = {
+	item: PropTypes.object.isRequired,
 };
