@@ -61,23 +61,23 @@ export const Item = ({ item }) => {
 						</Text>
 					</Box>
 				</Box>
-				<HStack borderTop={'1px'} color="black">
-					<Flex
-						p={4}
-						alignItems="center"
-						justifyContent={'space-between'}
-						roundedBottom={'sm'}
-						cursor={'pointer'}
-						w="full"
-					>
-						<Link to={`/NotreDameJoyas/item/${item.id}`}>
+				<Link to={`/NotreDameJoyas/item/${item.id}`}>
+					<HStack borderTop={'1px'} color="black">
+						<Flex
+							p={4}
+							alignItems="center"
+							justifyContent={'space-between'}
+							roundedBottom={'sm'}
+							cursor={'pointer'}
+							w="full"
+						>
 							<Text fontSize={'md'} fontWeight={'semibold'}>
 								View more
 							</Text>
-						</Link>
-						<BsArrowUpRight />
-					</Flex>
-				</HStack>
+							<BsArrowUpRight />
+						</Flex>
+					</HStack>
+				</Link>
 			</Box>
 		</Center>
 	);

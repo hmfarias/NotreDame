@@ -26,6 +26,43 @@ import { PropTypes } from 'prop-types';
 import { useContext, useEffect, useState } from 'react';
 import { CartContex } from '../../context';
 
+/**INTERNAL FUNCTION
+ * * getStockMessage(stock)
+ * This is an internal function of the component,
+ * which returns a component showing the available stock of the product,
+ * using conditional rendering and Chakra's dynamic styles.
+ * Params:
+ * 	- stock: This is the amount of available stock of the product, which will be displayed with dynamic styles.
+ */
+const getStockMessage = (stock) => {
+	let message = '';
+	let color = 'green.500';
+	let fontWeight = 'normal';
+	let fontStyle = 'normal';
+
+	switch (true) {
+		case stock === 0:
+			message = 'OUT OF STOCK - Soon available!';
+			color = 'red.500';
+			fontWeight = 'bold';
+			break;
+		case stock < 10:
+			message = `${stock} - Last avalilable units!`;
+			color = 'orange.500';
+			fontStyle = 'italic';
+			break;
+		default:
+			message = stock;
+			break;
+	}
+
+	return (
+		<Text as="span" color={color} fontWeight={fontWeight} fontStyle={fontStyle}>
+			{message}
+		</Text>
+	);
+};
+
 export const ItemDetailContainer = ({ item }) => {
 	//Receives from the ‘CartContext’ context, the value of the shopping cart counter and the updating function of that state.
 	const { cartState, addItem, removeItem } = useContext(CartContex);
@@ -35,8 +72,11 @@ export const ItemDetailContainer = ({ item }) => {
 
 	const handleAddItem = () => {
 		const newCount = count + 1;
-		setCount(newCount);
-		addItem(item, newCount);
+		//verify that no more products can be added than the available stock.
+		if (newCount <= item.stock) {
+			setCount(newCount);
+			addItem(item, newCount);
+		}
 	};
 
 	const handleRemoveItem = () => {
@@ -105,6 +145,16 @@ export const ItemDetailContainer = ({ item }) => {
 							<Text fontSize={'lg'}>{item.description}</Text>
 						</VStack>
 					</Stack>
+
+					<Flex>
+						{/*using dynamic rendering chakra dynamic styles */}
+						<Text>
+							<Text as="span" mr={2}>
+								Stock:
+							</Text>
+							{getStockMessage(item.stock)}
+						</Text>
+					</Flex>
 
 					<Flex justifyContent={'space-between'} width={'30%'} alignItems={'center'}>
 						<Button

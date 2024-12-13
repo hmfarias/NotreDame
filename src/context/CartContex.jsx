@@ -4,14 +4,14 @@
  */
 
 import { useStatStyles } from '@chakra-ui/react';
-import { createContext, useState } from 'react'; //This is used to create the cotext
+import { createContext, useState } from 'react'; //This is used to create the context
 
 // From this, you can find the 'CartContext' and its elements at any point in the application
 export const CartContex = createContext();
 
 // Definition of PROVIDER --- (children are all consumers of this context)
 export const CartProvider = ({ children }) => {
-	//The shopping cart counter is application-wide in scope and can therefore be defined in this context
+	//The shopping cart counter ("cartState") is application-wide in scope and can therefore be defined in this context
 	const [cartState, setCartState] = useState([]); //cartState and its updater function are now GLOBAL
 
 	//Definition of actions
