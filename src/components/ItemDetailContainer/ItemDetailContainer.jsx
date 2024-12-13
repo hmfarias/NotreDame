@@ -19,14 +19,45 @@ import {
 	SimpleGrid,
 	StackDivider,
 	useColorModeValue,
-	VisuallyHidden,
-	List,
-	ListItem,
+	Divider,
 } from '@chakra-ui/react';
 import { MdLocalShipping } from 'react-icons/md';
 import { PropTypes } from 'prop-types';
+import { useContext, useEffect, useState } from 'react';
+import { CartContex } from '../../context';
 
 export const ItemDetailContainer = ({ item }) => {
+	//Receives from the ‘CartContext’ context, the value of the shopping cart counter and the updating function of that state.
+	const { cartState, addItem, removeItem } = useContext(CartContex);
+
+	//Local states are defined
+	const [count, setCount] = useState(0);
+
+	const handleAddItem = () => {
+		const newCount = count + 1;
+		setCount(newCount);
+		addItem(item, newCount);
+	};
+
+	const handleRemoveItem = () => {
+		if (count > 0) {
+			setCount(count - 1);
+			removeItem(item);
+		} else {
+			setCount(0);
+		}
+	};
+
+	useEffect(() => {
+		//First check if the product already has something in the shopping cart.
+		//This is done only the first time - that's why use useeeffffect
+		const existingProduct = cartState.find((it) => it.id === item.id);
+		if (existingProduct) {
+			//If the product is already in the cart, update the product counter
+			setCount(existingProduct.qtyItem);
+		}
+	}, []);
+
 	return (
 		<Container maxW={'7xl'}>
 			<SimpleGrid
@@ -73,81 +104,34 @@ export const ItemDetailContainer = ({ item }) => {
 						<VStack spacing={{ base: 4, sm: 6 }}>
 							<Text fontSize={'lg'}>{item.description}</Text>
 						</VStack>
-						{/* <Box>
-              <Text
-                fontSize={{ base: "16px", lg: "18px" }}
-                color={useColorModeValue("yellow.500", "yellow.300")}
-                fontWeight={"500"}
-                textTransform={"uppercase"}
-                mb={"4"}
-              >
-                Product Details
-              </Text>
-
-              <List spacing={2}>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Between lugs:
-                  </Text>{" "}
-                  20 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Bracelet:
-                  </Text>{" "}
-                  leather strap
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Case:
-                  </Text>{" "}
-                  Steel
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Case diameter:
-                  </Text>{" "}
-                  42 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Dial color:
-                  </Text>{" "}
-                  Black
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Crystal:
-                  </Text>{" "}
-                  Domed, scratch‑resistant sapphire crystal with anti‑reflective
-                  treatment inside
-                </ListItem>
-                <ListItem>
-                  <Text as={"span"} fontWeight={"bold"}>
-                    Water resistance:
-                  </Text>{" "}
-                  5 bar (50 metres / 167 feet){" "}
-                </ListItem>
-              </List>
-            </Box> */}
 					</Stack>
 
-					<Button
-						rounded={'none'}
-						w={'full'}
-						mt={8}
-						size={'lg'}
-						py={'7'}
-						bg={useColorModeValue('gray.900', 'gray.50')}
-						color={useColorModeValue('white', 'gray.900')}
-						textTransform={'uppercase'}
-						_hover={{
-							transform: 'translateY(2px)',
-							boxShadow: 'lg',
-						}}
-					>
-						Add to cart
-					</Button>
+					<Flex justifyContent={'space-between'} width={'30%'} alignItems={'center'}>
+						<Button
+							onClick={handleRemoveItem}
+							bg={useColorModeValue('gray.900', 'gray.50')}
+							color={useColorModeValue('white', 'gray.900')}
+							_hover={{
+								transform: 'translateY(4px)',
+								boxShadow: 'lg',
+							}}
+						>
+							-
+						</Button>{' '}
+						<Text>{count}</Text>
+						<Button
+							onClick={handleAddItem}
+							bg={useColorModeValue('gray.900', 'gray.50')}
+							color={useColorModeValue('white', 'gray.900')}
+							_hover={{
+								transform: 'translateY(4px)',
+								boxShadow: 'lg',
+							}}
+						>
+							+
+						</Button>
+					</Flex>
+					<Divider />
 
 					<Stack direction="row" alignItems="center" justifyContent={'center'}>
 						<MdLocalShipping />

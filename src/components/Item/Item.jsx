@@ -28,10 +28,10 @@ export const Item = ({ item }) => {
 				my={5}
 				mx={[0, 5]}
 				overflow={'hidden'}
-				bg="white"
+				bg={useColorModeValue('gray.100', 'gray.300')}
 				border={'1px'}
 				borderColor="black"
-				boxShadow={useColorModeValue('7px 7px 0 grey', '7px 7px 0 #887F76')}
+				boxShadow={useColorModeValue('7px 7px 0 #718096', '7px 7px 0 #596171')}
 			>
 				<Box h={'200px'} borderBottom={'1px'} borderColor="black">
 					<Img
@@ -47,7 +47,7 @@ export const Item = ({ item }) => {
 					<Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
 						{item.title}
 					</Heading>
-					<Text color={'gray.500'} noOfLines={2}>
+					<Text color={useColorModeValue('gray.600', 'gray.800')} noOfLines={2}>
 						{item.description}
 					</Text>
 					<Box bg="gold" display={'inline-block'} px={2} py={1} color="grey" mb={2}>
