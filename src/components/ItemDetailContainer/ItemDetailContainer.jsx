@@ -3,11 +3,12 @@
  * returns a container with the complete data of the selected product
  * Params:
  * 	- item: It is the object that contains the data of the selected product
+ *
+ * Uses an internal function called getStockMessage
  */
 
 import {
 	Box,
-	chakra,
 	Container,
 	Stack,
 	Text,
@@ -20,6 +21,7 @@ import {
 	StackDivider,
 	useColorModeValue,
 	Divider,
+	useToast,
 } from '@chakra-ui/react';
 import { MdLocalShipping } from 'react-icons/md';
 import { PropTypes } from 'prop-types';
@@ -32,29 +34,21 @@ import { CartContex } from '../../context';
  * which returns a component showing the available stock of the product,
  * using conditional rendering and Chakra's dynamic styles.
  * Params:
- * 	- stock: This is the amount of available stock of the product, which will be displayed with dynamic styles.
+ * 	- stock: This is the amount of available stock of the product, which will be displayed with Conditional Rendering.
  */
 const getStockMessage = (stock) => {
-	let message = '';
-	let color = 'green.500';
-	let fontWeight = 'normal';
-	let fontStyle = 'normal';
+	const message =
+		stock === 0
+			? 'OUT OF STOCK - Soon available!'
+			: stock <= 5
+			? `${stock} - Last available units!`
+			: stock;
 
-	switch (true) {
-		case stock === 0:
-			message = 'OUT OF STOCK - Soon available!';
-			color = 'red.500';
-			fontWeight = 'bold';
-			break;
-		case stock < 10:
-			message = `${stock} - Last avalilable units!`;
-			color = 'orange.500';
-			fontStyle = 'italic';
-			break;
-		default:
-			message = stock;
-			break;
-	}
+	const color = stock === 0 ? 'red.500' : stock <= 5 ? 'orange.500' : 'green.500';
+
+	const fontWeight = stock === 0 ? 'bold' : 'normal';
+
+	const fontStyle = stock <= 5 && stock > 0 ? 'italic' : 'normal';
 
 	return (
 		<Text as="span" color={color} fontWeight={fontWeight} fontStyle={fontStyle}>
@@ -69,6 +63,7 @@ export const ItemDetailContainer = ({ item }) => {
 
 	//Local states are defined
 	const [count, setCount] = useState(0);
+	const toast = useToast();
 
 	const handleAddItem = () => {
 		const newCount = count + 1;
@@ -76,6 +71,16 @@ export const ItemDetailContainer = ({ item }) => {
 		if (newCount <= item.stock) {
 			setCount(newCount);
 			addItem(item, newCount);
+		} else {
+			// Show warning message
+			toast({
+				title: 'Insufficient stock',
+				description: 'Not enough stock to add this product.',
+				status: 'warning',
+				duration: 3000, //Duration in milliseconds
+				isClosable: true,
+				position: 'top-right', // Toast position
+			});
 		}
 	};
 
@@ -85,6 +90,14 @@ export const ItemDetailContainer = ({ item }) => {
 			removeItem(item);
 		} else {
 			setCount(0);
+			toast({
+				title: 'Products removed',
+				description: 'All products of this type have already been removed',
+				status: 'warning',
+				duration: 3000, //Duration in milliseconds
+				isClosable: true,
+				position: 'top-right', // Toast position
+			});
 		}
 	};
 
