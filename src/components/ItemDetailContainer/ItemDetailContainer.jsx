@@ -28,15 +28,15 @@ import { PropTypes } from 'prop-types';
 import { useContext, useEffect, useState } from 'react';
 import { CartContex } from '../../context';
 
-/**INTERNAL FUNCTION
+/**INTERNAL COMPONENT
  * * getStockMessage(stock)
- * This is an internal function of the component,
+ * This is an internal component,
  * which returns a component showing the available stock of the product,
  * using conditional rendering and Chakra's dynamic styles.
  * Params:
  * 	- stock: This is the amount of available stock of the product, which will be displayed with Conditional Rendering.
  */
-const getStockMessage = (stock) => {
+const GetStockMessage = ({ stock }) => {
 	const message =
 		stock === 0
 			? 'OUT OF STOCK - Soon available!'
@@ -75,7 +75,7 @@ export const ItemDetailContainer = ({ item }) => {
 			// Show warning message
 			toast({
 				title: 'Insufficient stock',
-				description: 'Not enough stock to add this product.',
+				description: `Not enough stock to add this product. Already added ${count} products`,
 				status: 'warning',
 				duration: 3000, //Duration in milliseconds
 				isClosable: true,
@@ -92,7 +92,8 @@ export const ItemDetailContainer = ({ item }) => {
 			setCount(0);
 			toast({
 				title: 'Products removed',
-				description: 'All products of this type have already been removed',
+				description:
+					'All products of this type have already been removed from the shopping cart.',
 				status: 'warning',
 				duration: 3000, //Duration in milliseconds
 				isClosable: true,
@@ -103,7 +104,7 @@ export const ItemDetailContainer = ({ item }) => {
 
 	useEffect(() => {
 		//First check if the product already has something in the shopping cart.
-		//This is done only the first time - that's why use useeeffffect
+		//This is done only the first time the component is renderized - that's why use useeeffffect
 		const existingProduct = cartState.find((it) => it.id === item.id);
 		if (existingProduct) {
 			//If the product is already in the cart, update the product counter
@@ -165,7 +166,7 @@ export const ItemDetailContainer = ({ item }) => {
 							<Text as="span" mr={2}>
 								Stock:
 							</Text>
-							{getStockMessage(item.stock)}
+							<GetStockMessage stock={item.stock} />
 						</Text>
 					</Flex>
 
