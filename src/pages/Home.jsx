@@ -10,7 +10,7 @@ import { ItemListContainer, Loader } from '../components';
 import { useItems } from '../hooks';
 
 export const Home = () => {
-	const { productsData, loading } = useItems();
+	const { itemsData, loading } = useItems('products');
 
-	return loading ? <Loader /> : <ItemListContainer products={productsData} />;
+	return loading ? <Loader /> : <ItemListContainer products={itemsData} />;
 };

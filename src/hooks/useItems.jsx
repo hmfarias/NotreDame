@@ -1,23 +1,43 @@
 /** CUSTOM HOOK
  * *useItems()
- * returns a objects array "productsData[]", obtained through the "getAllProducts()" function (it's a promise)
- * It also implements and returns the Boolean variable "loading", which remains in "True" state until the promise getallproducts() has been completed and the data from the API has been obtained.
+ * returns a objects array "itemsData[]", obtained from Firebase according to the collection received as parameter
+ * It also implements and returns the Boolean variable "loading", which remains in "True" state until the promise getDocs() has been completed and the data has been obtained.
+ * @param collectionName: is the name of the Firebase collection from which the data will be fetched.
  */
 
 import { useEffect, useState } from 'react';
-import { getAllProducts } from '../services';
+// import { getAllProducts } from '../services'; //CLIENT SERVER MODEL using the API
 
-export const useItems = () => {
-	const [productsData, setProductsData] = useState([]);
+//CON FIREBASE
+import { collection, getDocs } from 'firebase/firestore'; //WITH FIREBASE
+import { db } from '../firebase';
+
+export const useItems = (collectionName) => {
+	const [itemsData, setItemsData] = useState([]);
 	const [loading, setLoading] = useState(true);
 
 	// useEffect() -> Hook that serves to execute actions ensuring that the component is already rendered
 	// Then avoid that if for some reason the API takes too long to respond, an error occurs.
 	// useEffect() without denendencies implies that whatever within the useEffect() will be executed the first time the component is mount
 	useEffect(() => {
-		getAllProducts()
-			.then((res) => {
-				setProductsData(res.data.products);
+		//CLIENT SERVER MODEL using the API
+		// getAllProducts()
+		// 	.then((res) => {
+		// 		setProductsData(res.data.products);
+		// 	})
+		// 	.catch((error) => {
+		// 		console.error(error);
+		// 	})
+		// 	.finally(() => setLoading(false));
+
+		//WITH FIREBASE
+		//1 - the collection is identified and configured
+		const itemsCollection = collection(db, collectionName);
+
+		//2- documents are obtained and the status of productsData is updated
+		getDocs(itemsCollection)
+			.then((snapshot) => {
+				setItemsData(snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
 			})
 			.catch((error) => {
 				console.error(error);
@@ -25,5 +45,5 @@ export const useItems = () => {
 			.finally(() => setLoading(false));
 	}, []);
 
-	return { productsData, loading };
+	return { itemsData, loading };
 };

@@ -21,14 +21,17 @@ import {
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { CartWidget } from '../CartWidget';
-import { useCategory } from '../../hooks';
+import { useItems } from '../../hooks';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo2.png';
+
+//For migration to Firebase from the Dumy Json api
+// import { createProductsFirestore } from '../../helpers';
 
 export const NavBar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
-	const { categories } = useCategory();
+	const { itemsData } = useItems('categories');
 
 	return (
 		<>
@@ -47,7 +50,7 @@ export const NavBar = () => {
 								<Link to={`/NotreDameJoyas/`}>{'All products'}</Link>
 							</MenuItem>
 							{/* add the rest of categories */}
-							{categories.map((category) => (
+							{itemsData.map((category) => (
 								<MenuItem key={category.slug}>
 									<Link to={`/NotreDameJoyas/category/${category.slug}`}>
 										{category.name}
@@ -56,6 +59,10 @@ export const NavBar = () => {
 							))}
 						</MenuList>
 					</Menu>
+					{/* For migration to Firebase from the Dumy Json api */}
+					{/* <Button onClick={() => {createProductsFirestore('products');}}>
+						Create Products
+					</Button> */}
 					<Flex alignItems={'center'}>
 						<CartWidget />
 						<Stack direction={'row'} spacing={7}>
