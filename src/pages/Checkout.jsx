@@ -1,6 +1,7 @@
 /**
  * * Checkout()
  * Displays shopping cart details
+ * and allows you to proceed to payment
  */
 import {
 	Box,

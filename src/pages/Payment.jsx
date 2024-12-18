@@ -1,17 +1,27 @@
+/**
+ * * Payment()
+ *  Displays the form with the buyer's details and allows the order to be generated.
+ */
+
 import React, { useContext, useState } from 'react';
-import { Flex, Button, Input, Heading, useToast } from '@chakra-ui/react';
+import { Flex, Button, Input, Heading, useToast, Box, Text } from '@chakra-ui/react';
 import { db } from '../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 import { CartContex } from '../context';
+import { useNavigate } from 'react-router';
 
 export const Payment = () => {
 	const [name, setName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
 
-	const { cartState } = useContext(CartContex);
+	const { cartState, setCartState } = useContext(CartContex);
 
 	const toast = useToast();
+	const toastIdRef = React.useRef();
+
+	// useNavigate() allows for imperative navigation between components and route
+	const navigate = useNavigate();
 
 	const handleCreateOrder = () => {
 		if (name === '' || lastName === '' || email === '') {
@@ -19,7 +29,7 @@ export const Payment = () => {
 				title: 'Missing data!',
 				description: 'You must add all the required fields.',
 				status: 'error',
-				duration: 10000, // Visible for 10 seconds
+				duration: 5000, // Visible for 5 seconds
 				isClosable: true,
 				position: 'top-right', // Toast appears in the top-right corner
 			});
@@ -49,16 +59,81 @@ export const Payment = () => {
 		};
 
 		const ordersCollection = collection(db, 'orders');
-		addDoc(ordersCollection, orderObj).then(({ id }) => {
-			toast({
-				title: 'Order Created Successfully!',
-				description: `Your order ID is: ${id}. Please save it for future reference.`,
-				status: 'success',
-				duration: 5000, // Toast visible for 5 seconds
-				isClosable: true,
-				position: 'top-right',
-			});
+
+		// Toast while the order is being created
+		toastIdRef.current = toast({
+			title: 'Creating the order ...',
+			status: 'loading',
+			isClosable: true,
+			position: 'top-right',
 		});
+
+		// Attempt to save the order
+		addDoc(ordersCollection, orderObj)
+			.then(({ id }) => {
+				// success in saving the order
+
+				// the toast with the message: ‘Creating the order...’, closes
+				if (toastIdRef.current) {
+					toast.close(toastIdRef.current);
+				}
+
+				// Succes toast
+				toast({
+					position: 'top-right',
+					isClosable: true,
+					duration: null, // No time to close automatically
+					render: ({ onClose }) => (
+						<Box
+							bg="green.500"
+							color="white"
+							p={5}
+							borderRadius="md"
+							textAlign="center"
+							boxShadow="md"
+						>
+							<Text fontWeight="bold" fontSize="lg" mb={3}>
+								Order Created Successfully!
+							</Text>
+							<Text textAlign="justify" mb={4}>
+								Your Order ID is: <strong>{id}</strong>. Save it for future reference.
+							</Text>
+							<Button
+								colorScheme="blue"
+								onClick={() => {
+									// Shopping cart is emptied
+									setCartState([]);
+
+									// Navigate to the home page
+									navigate('../NotreDameJoyas');
+
+									// the toast closes
+									onClose();
+								}}
+							>
+								Close
+							</Button>
+						</Box>
+					),
+				});
+			})
+			.catch((error) => {
+				// error when saving the order
+				console.log(error);
+
+				// the toast with the message: ‘Creating the order...’, closes
+				if (toastIdRef.current) {
+					toast.close(toastIdRef.current);
+				}
+				toast({
+					title: 'Error',
+					description: 'There was a problem creating your order. Please try again.',
+					status: 'error',
+					position: 'top-right',
+					duration: 5000,
+					isClosable: true,
+				});
+			});
 	};
 
 	return (
