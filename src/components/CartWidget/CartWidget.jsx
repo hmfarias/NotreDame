@@ -1,15 +1,12 @@
-/**
- * * CartWidget.jsx
- *Implements and return the shopping cart icon
- *together with the number corresponding to the total items inside the shopping cart
- */
-
 import { Box } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartContex } from '../../context';
 import { Link } from 'react-router-dom';
 
+/**
+ * @description Implements and returns the shopping cart icon along with the number corresponding to the total number of items in the shopping cart.
+ */
 export const CartWidget = () => {
 	//Receives from the ‘CartContext’ context, the value of the shopping cart counter.
 	const { cartState } = useContext(CartContex);

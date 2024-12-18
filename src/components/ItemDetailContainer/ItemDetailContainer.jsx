@@ -1,12 +1,3 @@
-/**
- * * ItemDetailContainer.jsx
- * returns a container with the complete data of the selected product
- * Params:
- * 	- item: It is the object that contains the data of the selected product
- *
- * Uses an internal function called getStockMessage
- */
-
 import {
 	Box,
 	Container,
@@ -30,13 +21,11 @@ import { PropTypes } from 'prop-types';
 import { useContext, useEffect, useState } from 'react';
 import { CartContex } from '../../context';
 
-/**INTERNAL COMPONENT
- * * getStockMessage(stock)
- * This is an internal component,
+/**
+ * @description Is an internal component,
  * which returns a component showing the available stock of the product,
  * using conditional rendering and Chakra's dynamic styles.
- * Params:
- * 	- stock: This is the amount of available stock of the product, which will be displayed with Conditional Rendering.
+ * @param {*} stock Is the amount of available stock of the product, which will be displayed with Conditional Rendering.
  */
 const GetStockMessage = ({ stock }) => {
 	const message =
@@ -59,6 +48,10 @@ const GetStockMessage = ({ stock }) => {
 	);
 };
 
+/**
+ * @description returns a container with the complete data of the selected product
+ * @param item Is the object that contains the data of the selected product. Uses an internal function called getStockMessage
+ */
 export const ItemDetailContainer = ({ item }) => {
 	//Receives from the ‘CartContext’ context, the value of the shopping cart counter and the updating function of that state.
 	const { cartState, addItem, removeItem } = useContext(CartContex);

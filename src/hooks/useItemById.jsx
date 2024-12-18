@@ -1,9 +1,3 @@
-/** CUSTOM HOOK
- * * useItemsById(id)
- * Returns an object that corresponds to the complete data of the product that was used as argument in the call
- * @param id It's the ID that identifies the product to be brought
- */
-
 import { useEffect, useState } from 'react';
 // import { getProductById } from '../services'; //CLIENT SERVER MODEL USING THE API
 
@@ -12,6 +6,10 @@ import { useEffect, useState } from 'react';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../firebase';
 
+/**
+ * @description Custom Hook that returns an object that corresponds to the complete data of the product that was used as argument in the call
+ * @param {*} id It's the ID that identifies the product to be brought
+ */
 export const useItemById = (id) => {
 	const [product, setProduct] = useState({});
 	const [loading, setLoading] = useState(true);

@@ -15,7 +15,11 @@ export const CartProvider = ({ children }) => {
 
 	//Definition of actions
 
-	//addItem Receive the product and the quantity that is being added to the shopping cart
+	/**
+	 * @description Receive the product and the quantity that is being added to the shopping cart
+	 * @param {*} product is the object containing all the data of the product to be added
+	 * @param {*} qtyItem
+	 */
 	const addItem = (product, qtyItem) => {
 		//First validate if the received product already exists in the shopping cart.
 		const existingProduct = cartState.find((item) => item.id === product.id);
@@ -29,11 +33,14 @@ export const CartProvider = ({ children }) => {
 			);
 		} else {
 			//If the product doesn't exist in the shopping cart, it will only be added
-			setCartState([...cartState, { ...product, qtyItem: 1 }]);
+			setCartState([...cartState, { ...product, qtyItem: qtyItem }]);
 		}
 	};
 
-	//removeItem: Receive the product that is being added to the shopping cart (quantity isn't neccesary)
+	/**
+	 * @description Remove an item from the shopping cart, receive the product that is being added to the shopping cart (quantity isn't neccesary)
+	 * @param {*} product is the object containing all the data of the product to be removed
+	 */
 	const removeItem = (product) => {
 		//First validate if the received product already exists in the shopping cart.
 		const existingProduct = cartState.find((item) => item.id === product.id);
@@ -54,7 +61,10 @@ export const CartProvider = ({ children }) => {
 		}
 	};
 
-	//deleteItem: completely removes the product from the shopping cart
+	/**
+	 * @description completely removes the product from the shopping cart
+	 * @param {*} product is the object containing all the data of the product to be deleted
+	 */
 	const deleteItem = (product) => {
 		setCartState(cartState.filter((item) => item.id != product.id));
 	};

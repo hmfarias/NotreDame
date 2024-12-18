@@ -1,10 +1,3 @@
-/** Product Item
- * * Item.jsx
- * Implements and returns a card corresponding to a specific product
- * Params:
- * 	item: It's a only element of the "products" object which contains the necessary data for the card of that product
- */
-
 import {
 	Box,
 	Heading,
@@ -19,6 +12,10 @@ import { BsArrowUpRight } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
+/**
+ * @description Implements and returns a card corresponding to a specific product
+ * @param item It's a only element of the "products" object which contains the necessary data for the card of that product
+ */
 export const Item = ({ item }) => {
 	return (
 		<Center py={6}>

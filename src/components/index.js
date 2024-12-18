@@ -5,4 +5,3 @@ export * from './Loader';
 export * from './ItemDetailContainer';
 export * from './Item';
 export * from './Footer';
-export * from './ItemCount';

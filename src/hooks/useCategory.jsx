@@ -1,12 +1,9 @@
-/** CUSTOM HOOK
- * *useCategory()
- * Implements and returns an object that corresponds to the data of all categories of product
- * ONLY USED IN THE CLIENT-SERVER MODEL USING THE DUMY JSON API
- */
-
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getAllCategories } from '../services';
 
+/**
+ * @description Custom Hook that implements and returns an object that corresponds to the data of all categories of product. ONLY USED IN THE CLIENT-SERVER MODEL USING THE DUMY JSON API
+ */
 export const useCategory = () => {
 	const [categories, setCategories] = useState([]);
 

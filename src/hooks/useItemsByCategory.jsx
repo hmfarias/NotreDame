@@ -1,11 +1,3 @@
-/** CUSTOM HOOK
- * *useItemsByCategory(id, collectionName)
- * Implements and returns an object that corresponds to the data of the product category that was used as argument in the call
- * @param id: It's the Category ID that identifies the category to which the products to be brought must belong
- * id must be added in the dependencies array of UseeEffec, so that it is executed again if the category is changed
- * @param collectionNAme: Identifies the name of the firestore collection, in which the category field will be compared with the parameter ‘id’
- */
-
 import { useState, useEffect } from 'react';
 //import { getProductsByCategory } from '../services';  //CLIENT SERVER MODEL using the API
 
@@ -13,6 +5,12 @@ import { useState, useEffect } from 'react';
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase';
 
+/**
+ * @description Custom Hook that implements and returns an object that corresponds to the data of the product category that was used as argument in the call.
+ * @param {*} id It's the Category ID that identifies the category to which the products to be brought must belong
+ * id must be added in the dependencies array of UseeEffec, so that it is executed again if the category is changed
+ * @param {*} collectionName Identifies the name of the firestore collection, in which the category field will be compared with the parameter ‘id’
+ */
 export const useItemsByCategory = (id, collectionName) => {
 	const [itemsData, setItemsData] = useState([]);
 	const [loading, setLoading] = useState(true);

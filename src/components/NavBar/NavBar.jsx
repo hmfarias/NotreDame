@@ -1,8 +1,3 @@
-/**
- * Navbar.jsx
- * Impletements and return the navbar for the page
- */
-
 import {
 	Box,
 	Flex,
@@ -28,6 +23,9 @@ import logo from '../../assets/logo2.png';
 //For migration to Firebase from the Dumy Json api
 // import { createProductsFirestore } from '../../helpers';
 
+/**
+ * @description Impletements and return the navbar for the page
+ */
 export const NavBar = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 

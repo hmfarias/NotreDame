@@ -1,14 +1,11 @@
-/**
- * * ItemListContainer.jsx()
- * Implements and returns all items corresponding to the products
- * Params:
- * 	products: it's an object that contains all the products brought from the API
- */
-
 import { Flex } from '@chakra-ui/react';
 import { Item } from '../Item';
 import { PropTypes } from 'prop-types';
 
+/**
+ * @description Implements and returns all items corresponding to the products collection
+ * @param products it's an object that contains all the products brought from the Firestore
+ */
 export const ItemListContainer = ({ products }) => {
 	// To see all the existing categories among the products migrated to firebase
 	// All existing categories are stored in an array.

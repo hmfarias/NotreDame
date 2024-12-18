@@ -1,14 +1,12 @@
-/**
- * *createProductsFirestore(collectionName)
- * It is a helper that allows an initial migration by creating collections in fire base.
- * @param {*} collectionName is the name of the Firebase collection to be initialised
- */
-
 import { getAllProducts } from '../services';
 
 import { db } from './../firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
+/**
+ * @description It is a helper that allows an initial migration by creating collections in fire base.
+ * @param {*} collectionName is the name of the Firebase collection to be initialised
+ */
 export async function createProductsFirestore(collectionName) {
 	try {
 		// 1. Get the API products

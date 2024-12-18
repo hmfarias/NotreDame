@@ -1,8 +1,3 @@
-/**
- * * Footer.jsx
- * Returns the footer for the page
- */
-
 import {
 	Box,
 	chakra,
@@ -17,6 +12,12 @@ import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 
 import logo from '../../assets/logo2.png';
 
+/**
+ * @description It is an internal function that returns the buttons corresponding to the Social Networks.
+ * @param children Is the component to be placed inside the SocialButton component
+ * @param label Is the ‘label’ to be assigned to the children
+ * @param href Corresponds to the URL associated with the children
+ */
 const SocialButton = ({ children, label, href }) => {
 	return (
 		<chakra.button
@@ -41,6 +42,9 @@ const SocialButton = ({ children, label, href }) => {
 	);
 };
 
+/**
+ * @description Returns the footer for the page
+ */
 export const Footer = () => {
 	return (
 		<Box
