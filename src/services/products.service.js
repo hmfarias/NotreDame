@@ -5,6 +5,7 @@
  * * A product by ID
  * * All product categories
  * * All products in a category
+ * ONLY USED IN THE CLIENT-SERVER MODEL USING THE DUMY JSON API
  */
 
 import axios from 'axios';

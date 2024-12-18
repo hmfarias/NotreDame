@@ -44,7 +44,7 @@ export const NavBar = () => {
 						<MenuButton as={Button} cursor="pointer" style={{ marginLeft: 30 }}>
 							Categories
 						</MenuButton>
-						<MenuList height={'300px'} overflowY={'scroll'}>
+						<MenuList height={'fit-content'} overflowY={'scroll'}>
 							{/* add the home option in the menu */}
 							<MenuItem key={'home'}>
 								<Link to={`/NotreDameJoyas/`}>{'All products'}</Link>

@@ -77,7 +77,7 @@ export const ItemDetailContainer = ({ item }) => {
 				title: 'Insufficient stock',
 				description: `Not enough stock to add this product. Already added ${count} products`,
 				status: 'warning',
-				duration: 3000, //Duration in milliseconds
+				duration: 3500, //Duration in milliseconds
 				isClosable: true,
 				position: 'top-right', // Toast position
 			});
@@ -92,10 +92,9 @@ export const ItemDetailContainer = ({ item }) => {
 			setCount(0);
 			toast({
 				title: 'Products removed',
-				description:
-					'All products of this type have already been removed from the shopping cart.',
+				description: 'There are no products of this type in the shopping cart.',
 				status: 'warning',
-				duration: 3000, //Duration in milliseconds
+				duration: 3500, //Duration in milliseconds
 				isClosable: true,
 				position: 'top-right', // Toast position
 			});

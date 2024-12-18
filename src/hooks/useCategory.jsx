@@ -1,6 +1,7 @@
 /** CUSTOM HOOK
  * *useCategory()
  * Implements and returns an object that corresponds to the data of all categories of product
+ * ONLY USED IN THE CLIENT-SERVER MODEL USING THE DUMY JSON API
  */
 
 import React, { useEffect, useState } from 'react';

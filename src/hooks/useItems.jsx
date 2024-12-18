@@ -1,15 +1,15 @@
 /** CUSTOM HOOK
- * *useItems()
+ * *useItems(collectionName)
  * returns a objects array "itemsData[]", obtained from Firebase according to the collection received as parameter
  * It also implements and returns the Boolean variable "loading", which remains in "True" state until the promise getDocs() has been completed and the data has been obtained.
- * @param collectionName: is the name of the Firebase collection from which the data will be fetched.
+ * @param collectionName: is the name of the FIRESTORE collection from which the data will be fetched.
  */
 
 import { useEffect, useState } from 'react';
 // import { getAllProducts } from '../services'; //CLIENT SERVER MODEL using the API
 
-//CON FIREBASE
-import { collection, getDocs } from 'firebase/firestore'; //WITH FIREBASE
+//WITH FIRESTORE
+import { collection, getDocs } from 'firebase/firestore'; //WITH FIRESTORE
 import { db } from '../firebase';
 
 export const useItems = (collectionName) => {
@@ -30,7 +30,7 @@ export const useItems = (collectionName) => {
 		// 	})
 		// 	.finally(() => setLoading(false));
 
-		//WITH FIREBASE
+		//WITH FIRESTORE
 		//1 - the collection is identified and configured
 		const itemsCollection = collection(db, collectionName);
 

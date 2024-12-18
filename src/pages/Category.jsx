@@ -13,7 +13,7 @@ import { useParams } from 'react-router';
 export const Category = () => {
 	const { id } = useParams();
 
-	const { productsData, loading } = useItemsByCategory(id);
+	const { itemsData, loading } = useItemsByCategory(id, 'products');
 
-	return loading ? <Loader /> : <ItemListContainer products={productsData} />;
+	return loading ? <Loader /> : <ItemListContainer products={itemsData} />;
 };
