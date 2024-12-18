@@ -76,13 +76,25 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 
 <a name="router"></a>
 
-## CONSIDERACIONES SOBRE EL ROUTER
+## ALGUNAS CONSIDERACIONES
+
+### ROUTER
 
 Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en todos los paths "/NotreDame".
 
+
+
+
+
+### COMENTARIOS EN EL CÓDIGO
+
+Tratándose de una aplicación de índole DIDACTICO, se han dejado en el código comentarios útiles para su estudio. Pero se destaca que en un proyecto real, los mismos deben ser utilizados lo menos posible.
+
 [Volver al menú](#top)
 
+
 <hr>
+
 
 <a name="contribuyendo"></a>
 
