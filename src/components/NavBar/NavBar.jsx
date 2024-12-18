@@ -83,7 +83,10 @@ export const NavBar = () => {
 										src={'https://avatars.dicebear.com/api/male/username.svg'}
 									/>
 								</MenuButton>
-								<MenuList alignItems={'center'}>
+								<MenuList
+									alignItems={'center'}
+									bg={useColorModeValue('gray.500', 'gray.700')}
+								>
 									<br />
 									<Center>
 										<Avatar
@@ -97,9 +100,15 @@ export const NavBar = () => {
 									</Center>
 									<br />
 									<MenuDivider />
-									<MenuItem>Your Servers</MenuItem>
-									<MenuItem>Account Settings</MenuItem>
-									<MenuItem>Logout</MenuItem>
+									<MenuItem bg={useColorModeValue('gray.500', 'gray.700')}>
+										Your Servers
+									</MenuItem>
+									<MenuItem bg={useColorModeValue('gray.500', 'gray.700')}>
+										Account Settings
+									</MenuItem>
+									<MenuItem bg={useColorModeValue('gray.500', 'gray.700')}>
+										Logout
+									</MenuItem>
 								</MenuList>
 							</Menu>
 						</Stack>

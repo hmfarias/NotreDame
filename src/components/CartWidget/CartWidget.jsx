@@ -8,6 +8,7 @@ import { Box } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartContex } from '../../context';
+import { Link } from 'react-router-dom';
 
 export const CartWidget = () => {
 	//Receives from the ‘CartContext’ context, the value of the shopping cart counter.
@@ -17,10 +18,12 @@ export const CartWidget = () => {
 	const totalItemsCart = cartState.reduce((sum, item) => sum + item.qtyItem, 0);
 
 	return (
-		<Box
+		// <Link to="NotreDameJoyas/checkout">
+		<Link
+			to="NotreDameJoyas/checkout"
 			style={{
 				display: 'flex',
-				marginRight: '7px',
+				marginRight: '21px',
 				alignItems: 'center',
 				width: '30%',
 				justifyContent: 'space-between',
@@ -29,6 +32,7 @@ export const CartWidget = () => {
 		>
 			<FaShoppingCart size={30} />
 			{totalItemsCart}
-		</Box>
+		</Link>
+		// </Link>
 	);
 };

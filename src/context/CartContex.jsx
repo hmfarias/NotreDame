@@ -3,7 +3,6 @@
  * Define the context for application shopping cart
  */
 
-import { useStatStyles } from '@chakra-ui/react';
 import { createContext, useState } from 'react'; //This is used to create the context
 
 // From this, you can find the 'CartContext' and its elements at any point in the application
@@ -55,6 +54,11 @@ export const CartProvider = ({ children }) => {
 		}
 	};
 
+	//deleteItem: completely removes the product from the shopping cart
+	const deleteItem = (product) => {
+		setCartState(cartState.filter((item) => item.id != product.id));
+	};
+
 	return (
 		<CartContex.Provider
 			value={{
@@ -63,6 +67,7 @@ export const CartProvider = ({ children }) => {
 				setCartState,
 				addItem,
 				removeItem,
+				deleteItem,
 			}}
 		>
 			{children}

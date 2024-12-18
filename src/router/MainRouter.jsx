@@ -11,7 +11,7 @@
  */
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Category, Home, ItemDetail, NotFound } from '../pages';
+import { Category, Checkout, Home, ItemDetail, NotFound, Payment } from '../pages';
 import { NavBar } from '../components';
 
 export const MainRouter = () => {
@@ -22,6 +22,10 @@ export const MainRouter = () => {
 				<Route path="/NotreDameJoyas/" element={<Home />} />
 				<Route path="/NotreDameJoyas/item/:id" element={<ItemDetail />} />
 				<Route path="/NotreDameJoyas/category/:id" element={<Category />} />
+				<Route path="/NotreDameJoyas/checkout" element={<Checkout />} />
+				<Route path="/NotreDameJoyas/payment" element={<Payment />} />
+
+				{/* For errors pages */}
 				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</Router>

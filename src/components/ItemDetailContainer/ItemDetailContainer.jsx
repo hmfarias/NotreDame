@@ -22,7 +22,9 @@ import {
 	useColorModeValue,
 	Divider,
 	useToast,
+	IconButton,
 } from '@chakra-ui/react';
+import { MinusIcon, AddIcon } from '@chakra-ui/icons';
 import { MdLocalShipping } from 'react-icons/md';
 import { PropTypes } from 'prop-types';
 import { useContext, useEffect, useState } from 'react';
@@ -170,7 +172,10 @@ export const ItemDetailContainer = ({ item }) => {
 					</Flex>
 
 					<Flex justifyContent={'space-between'} width={'30%'} alignItems={'center'}>
-						<Button
+						<IconButton
+							aria-label="Decrease quantity"
+							icon={<MinusIcon />}
+							size="sm"
 							onClick={handleRemoveItem}
 							bg={useColorModeValue('gray.900', 'gray.50')}
 							color={useColorModeValue('white', 'gray.900')}
@@ -180,9 +185,12 @@ export const ItemDetailContainer = ({ item }) => {
 							}}
 						>
 							-
-						</Button>{' '}
+						</IconButton>{' '}
 						<Text>{count}</Text>
-						<Button
+						<IconButton
+							ria-label="Increase quantity"
+							icon={<AddIcon />}
+							size="sm"
 							onClick={handleAddItem}
 							bg={useColorModeValue('gray.900', 'gray.50')}
 							color={useColorModeValue('white', 'gray.900')}
@@ -192,7 +200,7 @@ export const ItemDetailContainer = ({ item }) => {
 							}}
 						>
 							+
-						</Button>
+						</IconButton>
 					</Flex>
 					<Divider />
 
