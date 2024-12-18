@@ -68,6 +68,8 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 
 ![Static Badge](https://img.shields.io/badge/CHAKRA-orange?style=for-the-badge) como una librería de componentes de interfaz de usuario para React que permite construir aplicaciones web modernas y accesibles de manera rápida, ofreciendo componentes personalizables y listos para usar, con un enfoque en simplicidad y diseño responsivo.
 
+![Static Badge](https://img.shields.io/badge/Firestore-yellow?style=for-the-badge) como base de datos de documentos NoSQL de Google Cloud Platform que permite almacenar, sincronizar y consultar datos para aplicaciones web y móviles.
+
 [Volver al menú](#top)
 
 <hr>
