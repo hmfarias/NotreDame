@@ -61,7 +61,7 @@ export const Item = ({ item }) => {
 						</Text>
 					</Box>
 				</Box>
-				<Link to={`/NotreDameJoyas/item/${item.id}`}>
+				<Link to={`/NotreDame/item/${item.id}`}>
 					<HStack borderTop={'1px'} color="black">
 						<Flex
 							p={4}

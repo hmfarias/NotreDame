@@ -41,7 +41,7 @@ export const Checkout = () => {
 
 	// By clicking on the ‘Buy’ button, you navigate directly to the ‘/payment’ page.
 	const handleNavigatePayment = () => {
-		navigate('../NotreDameJoyas/payment');
+		navigate('../NotreDame/payment');
 	};
 
 	return (

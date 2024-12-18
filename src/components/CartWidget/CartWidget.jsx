@@ -18,9 +18,8 @@ export const CartWidget = () => {
 	const totalItemsCart = cartState.reduce((sum, item) => sum + item.qtyItem, 0);
 
 	return (
-		// <Link to="NotreDameJoyas/checkout">
 		<Link
-			to="NotreDameJoyas/checkout"
+			to="NotreDame/checkout"
 			style={{
 				display: 'flex',
 				marginRight: '21px',

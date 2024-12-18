@@ -7,7 +7,7 @@
  *			2- What component will be rendered to that destination "element" (This is the commponent passed as parameter)
  *
  *	Important clarification: GH-Pages was installed to be able to make the deploy in git pages.
- *  Then I add "NotreDameJoyas" to all Paths, for compatibility with the configuration of Github Pages (as in Vite.config.js)
+ *  Then I add "NotreDame" to all Paths, for compatibility with the configuration of Github Pages (as in Vite.config.js)
  */
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -19,11 +19,11 @@ export const MainRouter = () => {
 		<Router>
 			<NavBar />
 			<Routes>
-				<Route path="/NotreDameJoyas/" element={<Home />} />
-				<Route path="/NotreDameJoyas/item/:id" element={<ItemDetail />} />
-				<Route path="/NotreDameJoyas/category/:id" element={<Category />} />
-				<Route path="/NotreDameJoyas/checkout" element={<Checkout />} />
-				<Route path="/NotreDameJoyas/payment" element={<Payment />} />
+				<Route path="/NotreDame/" element={<Home />} />
+				<Route path="/NotreDame/item/:id" element={<ItemDetail />} />
+				<Route path="/NotreDame/category/:id" element={<Category />} />
+				<Route path="/NotreDame/checkout" element={<Checkout />} />
+				<Route path="/NotreDame/payment" element={<Payment />} />
 
 				{/* For errors pages */}
 				<Route path="*" element={<NotFound />} />

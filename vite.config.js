@@ -10,6 +10,6 @@ import react from '@vitejs/plugin-react';
 //Para compatibilidad con la configuración de GitHub Pages, modifico la funcion defineConfig() que debe quedar de la siguiente manera:
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: '/NotreDameJoyas',
+	base: '/NotreDame',
 	plugins: [react()],
 });

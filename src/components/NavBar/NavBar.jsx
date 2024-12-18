@@ -37,7 +37,7 @@ export const NavBar = () => {
 		<>
 			<Box bg={useColorModeValue('gray.500', 'gray.700')} px={4}>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-					<Link to={`/NotreDameJoyas/`}>
+					<Link to={`/NotreDame/`}>
 						<Image src={logo} objectFit="cover" h="70px" w="auto" alt={'Logo Image'} />
 					</Link>
 					<Menu>
@@ -47,14 +47,12 @@ export const NavBar = () => {
 						<MenuList height={'fit-content'} overflowY={'scroll'}>
 							{/* add the home option in the menu */}
 							<MenuItem key={'home'}>
-								<Link to={`/NotreDameJoyas/`}>{'All products'}</Link>
+								<Link to={`/NotreDame/`}>{'All products'}</Link>
 							</MenuItem>
 							{/* add the rest of categories */}
 							{itemsData.map((category) => (
 								<MenuItem key={category.slug}>
-									<Link to={`/NotreDameJoyas/category/${category.slug}`}>
-										{category.name}
-									</Link>
+									<Link to={`/NotreDame/category/${category.slug}`}>{category.name}</Link>
 								</MenuItem>
 							))}
 						</MenuList>
