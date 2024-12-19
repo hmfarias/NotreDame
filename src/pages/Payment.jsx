@@ -18,7 +18,7 @@ export const Payment = () => {
 	const { cartState, setCartState } = useContext(CartContex);
 
 	const toast = useToast();
-	const toastIdRef = React.useRef();
+	const toastIdRef = React.useRef(); // to identify a toast and to be able to close it when needed
 
 	// useNavigate() allows for imperative navigation between components and route
 	const navigate = useNavigate();
