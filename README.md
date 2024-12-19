@@ -34,9 +34,10 @@
 1. [Introducción](#introduccion)
 2. [Construido con](#consturido)
 3. [Consideraciones sobre el Router](#router)
-4. [Contribuyendo](#contribuyendo)
-5. [Licencia](#licencia)
-6. [Contacto](#contacto)
+4. [Esquema de la App](#esquema)
+5. [Contribuyendo](#contribuyendo)
+6. [Licencia](#licencia)
+7. [Contacto](#contacto)
 
 <hr>
 
@@ -83,9 +84,6 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en todos los paths "/NotreDame".
 
 
-
-
-
 ### COMENTARIOS EN EL CÓDIGO
 
 Tratándose de una aplicación de índole DIDACTICO, se han dejado en el código comentarios útiles para su estudio. Pero se destaca que en un proyecto real, los mismos deben ser utilizados lo menos posible.
@@ -95,6 +93,19 @@ Tratándose de una aplicación de índole DIDACTICO, se han dejado en el código
 
 <hr>
 
+<a name="esquema"></a>
+
+## ESQUEMA DE LA APP
+
+<div align="center">
+  <a href="https://github.com/hmfarias/NotreDame">
+    <img src="https://github.com/hmfarias/NotreDame/blob/main/src/assets/esquemaApp.png" alt="Logo" width="900" height="auto">
+  </a>
+</div>
+
+[Volver al menú](#top)
+
+<hr>
 
 <a name="contribuyendo"></a>
 
