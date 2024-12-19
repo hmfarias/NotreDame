@@ -3,7 +3,7 @@
  * Define the context for application shopping cart
  */
 
-import { createContext, useState } from 'react'; //This is used to create the context
+import { createContext, useState, useEffect } from 'react'; // Added useEffect
 
 // From this, you can find the 'CartContext' and its elements at any point in the application
 export const CartContex = createContext();
@@ -11,9 +11,18 @@ export const CartContex = createContext();
 // Definition of PROVIDER --- (children are all consumers of this context)
 export const CartProvider = ({ children }) => {
 	//The shopping cart counter ("cartState") is application-wide in scope and can therefore be defined in this context
-	const [cartState, setCartState] = useState([]); //cartState and its updater function are now GLOBAL
+	const [cartState, setCartState] = useState(() => {
+		// Load cartState from local storage if it exists
+		const savedCart = localStorage.getItem('cartState');
+		return savedCart ? JSON.parse(savedCart) : [];
+	}); //cartState and its updater function are now GLOBAL
 
-	//Definition of actions
+	// Save cartState to local storage whenever it changes
+	useEffect(() => {
+		localStorage.setItem('cartState', JSON.stringify(cartState));
+	}, [cartState]);
+
+	//Definition of actions that can be performed on the shopping cart
 
 	/**
 	 * @description Receive the product and the quantity that is being added to the shopping cart
