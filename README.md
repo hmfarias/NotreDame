@@ -98,7 +98,7 @@ Tratándose de una aplicación de índole DIDACTICO, se han dejado en el código
 ## ESQUEMA DE LA APP
 
 <div align="center">
-  <a href="https://github.com/hmfarias/NotreDame">
+  <a href="https://github.com/hmfarias/NotreDame/blob/main/src/assets/esquemaApp.png">
     <img src="https://github.com/hmfarias/NotreDame/blob/main/src/assets/esquemaApp.png" alt="Logo" width="900" height="auto">
   </a>
 </div>
