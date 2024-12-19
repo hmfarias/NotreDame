@@ -83,6 +83,10 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 
 Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en todos los paths "/NotreDame".
 
+### LOCAL STORAGE
+
+La App guarda el estado del carrito de compras en el Local Storage del navegador y lo mantiene actualizado cada vez que el mismo tiene alguna modificación.
+
 
 ### COMENTARIOS EN EL CÓDIGO
 
