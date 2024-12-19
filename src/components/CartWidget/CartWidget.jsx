@@ -1,4 +1,3 @@
-import { Box } from '@chakra-ui/react';
 import { useContext } from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import { CartContex } from '../../context';
@@ -29,6 +28,5 @@ export const CartWidget = () => {
 			<FaShoppingCart size={30} />
 			{totalItemsCart}
 		</Link>
-		// </Link>
 	);
 };

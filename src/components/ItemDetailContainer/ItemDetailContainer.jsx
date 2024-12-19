@@ -34,13 +34,9 @@ const GetStockMessage = ({ stock }) => {
 			: stock <= 5
 			? `${stock} - Last available units!`
 			: stock;
-
 	const color = stock === 0 ? 'red.500' : stock <= 5 ? 'orange.500' : 'green.500';
-
 	const fontWeight = stock === 0 ? 'bold' : 'normal';
-
 	const fontStyle = stock <= 5 && stock > 0 ? 'italic' : 'normal';
-
 	return (
 		<Text as="span" color={color} fontWeight={fontWeight} fontStyle={fontStyle}>
 			{message}
