@@ -53,7 +53,7 @@ export const NotFound = () => {
 				</Text>
 			</VStack>
 			<HStack mt={8} spacing={4}>
-				<Link to="/NotreDame/">
+				<Link to="/">
 					<Button
 						boxShadow="lg"
 						bg="gray.600" // Dark gray background

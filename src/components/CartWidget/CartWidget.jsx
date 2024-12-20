@@ -15,7 +15,7 @@ export const CartWidget = () => {
 
 	return (
 		<Link
-			to="NotreDame/checkout"
+			to="checkout"
 			style={{
 				display: 'flex',
 				marginRight: '21px',

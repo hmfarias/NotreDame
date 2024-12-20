@@ -105,7 +105,7 @@ export const Payment = () => {
 									setCartState([]);
 
 									// Navigate to the home page
-									navigate('../NotreDame');
+									navigate('/');
 
 									// the toast closes
 									onClose();

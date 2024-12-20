@@ -35,22 +35,22 @@ export const NavBar = () => {
 		<>
 			<Box bg={useColorModeValue('gray.500', 'gray.700')} px={4}>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-					<Link to={`/NotreDame/`}>
+					<Link to={`/`}>
 						<Image src={logo} objectFit="cover" h="70px" w="auto" alt={'Logo Image'} />
 					</Link>
 					<Menu>
 						<MenuButton as={Button} cursor="pointer" style={{ marginLeft: 30 }}>
-							Categories
+							Categoriesasdfasdfasdf
 						</MenuButton>
 						<MenuList height={'fit-content'} overflowY={'scroll'}>
 							{/* add the home option in the menu */}
 							<MenuItem key={'home'}>
-								<Link to={`/NotreDame/`}>{'All products'}</Link>
+								<Link to={`/`}>{'All products'}</Link>
 							</MenuItem>
 							{/* add the rest of categories */}
 							{itemsData.map((category) => (
 								<MenuItem key={category.slug}>
-									<Link to={`/NotreDame/category/${category.slug}`}>{category.name}</Link>
+									<Link to={`/category/${category.slug}`}>{category.name}</Link>
 								</MenuItem>
 							))}
 						</MenuList>
