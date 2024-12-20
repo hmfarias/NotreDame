@@ -33,11 +33,14 @@
 
 1. [Introducción](#introduccion)
 2. [Construido con](#consturido)
-3. [Consideraciones sobre el Router](#router)
-4. [Esquema de la App](#esquema)
-5. [Contribuyendo](#contribuyendo)
-6. [Licencia](#licencia)
-7. [Contacto](#contacto)
+3. [Algunas Consideraciones](#consideraciones)
+   * [Router](#router)
+   * [Local Storage](#localstorage)
+   * [Comentarios en el código](#comentarios)
+5. [Esquema de la App](#esquema)
+6. [Contribuyendo](#contribuyendo)
+7. [Licencia](#licencia)
+8. [Contacto](#contacto)
 
 <hr>
 
@@ -75,18 +78,30 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 
 <hr>
 
-<a name="router"></a>
+<a name="consideraciones"></a>
 
 ## ALGUNAS CONSIDERACIONES
+
+<a name="router"></a>
 
 ### ROUTER
 
 Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en todos los paths "/NotreDame".
 
+<a name="localstorage"></a>
+
 ### LOCAL STORAGE
 
 La App guarda el estado del carrito de compras en el Local Storage del navegador y lo mantiene actualizado cada vez que el mismo tiene alguna modificación.
 
+### REFRESH EN GITHUB PAGES
+
+En una aplicación basada en rutas como en React, al recargar una página que no es la raíz (/), aún cuando la ruta sea válida (por ejemplo la ruta de un item), Github Pages devuelve una pagina 404 por defecto. 
+
+Esto se debe a que GitHub Pages no sabe cómo manejar rutas dinámicas y espera encontrar un archivo físico para cada URL.
+Para solucionar esto, se ha creado una página llamada 404.html, la cual actua como un fallback para rutas que hace que ante un refresh en una página que NO sea el home, se redirecciones siempre al directorio raiz.
+
+<a name="comentarios"></a>
 
 ### COMENTARIOS EN EL CÓDIGO
 
