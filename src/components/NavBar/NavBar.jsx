@@ -40,7 +40,7 @@ export const NavBar = () => {
 					</Link>
 					<Menu>
 						<MenuButton as={Button} cursor="pointer" style={{ marginLeft: 30 }}>
-							Categories
+							Categoriesss
 						</MenuButton>
 						<MenuList height={'fit-content'} overflowY={'scroll'}>
 							{/* add the home option in the menu */}
