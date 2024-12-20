@@ -38,9 +38,10 @@
    * [Local Storage](#localstorage)
    * [Comentarios en el código](#comentarios)
 5. [Esquema de la App](#esquema)
-6. [Contribuyendo](#contribuyendo)
-7. [Licencia](#licencia)
-8. [Contacto](#contacto)
+6. [Instalación en local](#instalacion)
+7. [Contribuyendo](#contribuyendo)
+8. [Licencia](#licencia)
+9. [Contacto](#contacto)
 
 <hr>
 
@@ -121,6 +122,47 @@ Tratándose de una aplicación de índole DIDACTICO, se han dejado en el código
     <img src="https://github.com/hmfarias/NotreDame/blob/main/src/assets/esquemaApp.png" alt="Logo" width="900" height="auto">
   </a>
 </div>
+
+[Volver al menú](#top)
+
+<hr>
+
+<a name="instalacion"></a>
+
+## INSTALACIÓN EN LOCAL
+
+Prerequisitos de instalación:
+Debes contar con un editor de código como Visual Estudio Code o similar.
+
+1- En tu árbol de directorios sitúate en la carpeta donde deseas instalar la app.
+
+2- Clona el repositorio escribiendo en la terminal o consola de tu pc el siguiente código:
+<code>
+  git clone https://github.com/hmfarias/NotreDame.git
+</code>
+
+
+Esto creará la carpeta "NotreDame" y en su interior los archivos de aplicación.
+
+3- Ejecuta tu editor de código y sitúate dentro de la carpeta NotreDame. Podrás ver el código de la aplicación.
+
+4- Abre una terminal y asegurate de estar ubicado dentro de la carpeta NotreDame
+
+5- Ejecuta:
+<code>
+  npm install 
+</code>
+
+Esto instalará la aplicación de manera local.
+
+6- Ejecuta:
+<code>
+  npm run dev 
+</code>
+
+Esto iniciará la aplicación en modo desarrrollador, y mostrará un link del tipo "http://localhost:xxxx/NotreDame", mediante el cual podrá accederse a la aplicación en modo local.
+
+
 
 [Volver al menú](#top)
 
