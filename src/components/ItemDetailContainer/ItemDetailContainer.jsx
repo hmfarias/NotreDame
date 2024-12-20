@@ -83,7 +83,7 @@ export const ItemDetailContainer = ({ item }) => {
 			setCount(0);
 			toast({
 				title: 'Products removed',
-				description: 'There are no products of this type in the shopping cart.',
+				description: 'There are no products of this type in the cart.',
 				status: 'warning',
 				duration: 3500, //Duration in milliseconds
 				isClosable: true,

@@ -139,7 +139,7 @@ export const Payment = () => {
 	return (
 		<Flex
 			w={'100vw'}
-			h={'60vh'}
+			h={'calc(100vh - 10rem)'}
 			alignItems={'center'}
 			justifyContent={'center'}
 			flexDirection={'column'}

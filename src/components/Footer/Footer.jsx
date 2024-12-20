@@ -50,6 +50,7 @@ export const Footer = () => {
 		<Box
 			bg={useColorModeValue('gray.500', 'gray.700')}
 			color={useColorModeValue('gray.700', 'gray.200')}
+			h={'5rem'}
 		>
 			<Container
 				as={Stack}
