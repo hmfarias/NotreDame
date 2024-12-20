@@ -45,7 +45,14 @@ export const Checkout = () => {
 	};
 
 	return (
-		<Box p={6} maxW="800px" mx="auto" h={'90vh'} bg="gray.600" color="gray.300">
+		<Box
+			p={6}
+			maxW="800px"
+			mx="auto"
+			h={'calc(100vh - 10rem)'}
+			bg="gray.600"
+			color="gray.300"
+		>
 			<Heading as="h2" size="lg" mb={6} textAlign="center">
 				Cart Details
 			</Heading>
