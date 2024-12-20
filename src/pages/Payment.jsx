@@ -168,7 +168,7 @@ export const Payment = () => {
 				/>
 
 				<Button colorScheme="teal" size="lg" onClick={handleCreateOrder}>
-					Crear Orden
+					Create Order
 				</Button>
 			</Flex>
 		</Flex>
