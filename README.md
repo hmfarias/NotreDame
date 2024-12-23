@@ -90,7 +90,7 @@ Este repositorio contiene el código fuente de nuestra plataforma, desarrollada 
 
 ### ROUTER
 
-Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en todos los paths "/NotreDame".
+Con la finalidad de utilizar GitHub Pages, se ha instalado gh-pages. Atento a ello, y para lograr la compatibilidad y automatización a la hora de realizar el deploy, fue necesario agregar en el componente <Router> la propiedad "basename = '/NotreDame'".
 
 <a name="localstorage"></a>
 
